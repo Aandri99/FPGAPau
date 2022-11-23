@@ -103,7 +103,7 @@ In this assignment we are going to use the [Vivado DDS compiler](https://docs.xi
 
 10.2. Use a separate AXI4 Register Bank to provide a common *phase_clr* to all hierarchies.
 
-10.3. Add the 4 *sin* and 8 *cos* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd) 
+10.3. Add the 4 *sin* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd). Leave the 4 *cos* outputs disconnected. 
 
 10.4 Connect the output of the cascade to *dac_data_1* and disable *dac_data_2* (double click on the DAC IP and uncheck *Ch2 Enabled*).
 
