@@ -109,7 +109,7 @@ In this assignment we are going to use the [Vivado DDS compiler](https://docs.xi
 
 10.5 Re-create HDL wrapper, generate bitstream and verify that you are able to generate a linear combination of 4 frequency tones.
 
-10.6. Configure the frequency, phase and amplitudes to generate Square, Triangular... waveforms. To this end, have a look at the [Table of common Fourier series] (https://en.wikipedia.org/wiki/Fourier_series#Table_of_common_Fourier_series)
+10.6. Configure the frequency, phase and amplitudes to generate Square, Triangular... waveforms. To this end, have a look at the [Table of common Fourier series](https://en.wikipedia.org/wiki/Fourier_series#Table_of_common_Fourier_series)
 
 
 
