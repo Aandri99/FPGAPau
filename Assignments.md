@@ -115,7 +115,7 @@ In this assignment we are going to use the [Vivado DDS compiler](https://docs.xi
 ## 4. DMA & Decimation (Analog IO)
 In this assignment we are going to introduce a decimation logic that is capable of effectively slowing down an AXI Stream data flow.
 
-1. Create a new VHDL module with the following ports:
+1. Create a new VHDL / Verilog module with the following ports:
 
 |Name|In/Out | Width (bits) |Description |
 |---|---|---|---|
