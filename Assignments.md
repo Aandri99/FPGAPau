@@ -134,7 +134,7 @@ In this assignment we are going to introduce a decimation logic that is capable 
  * data_o_tvalid = data_i_tvalid every *dec* clock cycles and data_o_tvalid = 0 otherwise.
  * data_i_tready = data_o_tready every *dec* clock cycles and data_i_tready = 0 otherwise.
 
-**Hint**: Have a look at the [stream_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_ctrl.vhd) to get inspired
+**Hint**: Have a look at the [stream_dec.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/stream_dec.vhd) to get inspired
 
 3. Test and verify your VHDL core via a behavioural simulation.
 
