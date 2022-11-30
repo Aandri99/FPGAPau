@@ -112,6 +112,39 @@ In this assignment we are going to use the [Vivado DDS compiler](https://docs.xi
 10.6. Configure the frequency, phase and amplitudes to generate Square, Triangular... waveforms. To this end, have a look at the [Table of common Fourier series](https://en.wikipedia.org/wiki/Fourier_series#Table_of_common_Fourier_series)
 
 
+## 4. DMA & Decimation (Analog IO)
+In this assignment we are going to introduce a decimation logic that is capable of effectively slowing down an AXI Stream data flow.
+
+1. Create a new VHDL module with the following ports:
+
+|Name|In/Out | Width (bits) |Description |
+|---|---|---|---|
+|clk|in|1|System clock|
+|resetn|in|1|System reset (active low)|
+|dec| in | 32 | Configurable decimation|
+|data_i_tdata|in|16|Data in subport | 
+|data_i_tvalid|in|1|Data in valid subport|
+|data_i_tready|out|1|Data in ready subport| 
+|data_o_tdata|out|16|Data out subport | 
+|data_o_tvalid|out|1|Data out valid subport|
+|data_o_tready|in|1|Data out ready subport| 
+
+2. Edit the VHDL / Verilog module such that:
+ * data_o_tdata = data_i_tdata
+ * data_o_tvalid = data_i_tvalid every *dec* clock cycles and data_o_tvalid = 0 otherwise.
+ * data_i_tready = data_o_tready every *dec* clock cycles and data_i_tready = 0 otherwise.
+
+**Hint**: Have a look at the [stream_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_ctrl.vhd) to get inspired
+
+3. Test and verify your VHDL core via a behavioural simulation.
+
+4. Open the previously created [DMA design](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/DMA-transfer) and insert decimation module right after the DAC output and another instance just before the DAC input.
+
+5. Enable 2 additional outputs of the register bank to separately control both decimations (*dec* inputs).
+
+6. Extend the [DMA_transfer.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/DMA_transfer.ipynb) to set the decimations.
+
+7. Try different DAC and ADC decimations and see how the acquired waveform gets effectively *streched* or *compressed*.
 
 
 
