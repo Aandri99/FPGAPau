@@ -138,7 +138,7 @@ In this assignment we are going to introduce a decimation logic that is capable 
 
 3. Test and verify your VHDL core via a behavioural simulation.
 
-4. Open the previously created [DMA design](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/DMA-transfer) and insert decimation module right after the DAC output and another instance just before the DAC input.
+4. Open the previously created [DMA design](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/DMA-transfer) and insert decimation module right after the ADC output and another instance just before the DAC input.
 
 5. Enable 2 additional outputs of the register bank to separately control both decimations (*dec* inputs).
 
