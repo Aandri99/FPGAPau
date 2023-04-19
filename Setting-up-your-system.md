@@ -2,12 +2,11 @@
 ###  System Requirements
 The system requirements are detailed within the Vivado User Guide UG973. To summarize, you are typically fine with:
 * OS: Windows or Linux
-* ~ 4GB RAM
-* ~ 50GB free storage 
+* ~ 8GB RAM
+* ~ 150GB free storage 
 
 ###  Install Vivado WebPACK
-I recommend to follow the step-by-step instructions within the [Digilent Reference Documentation](https://reference.digilentinc.com/vivado/installing-vivado/start). The most recent version under which this tutorial has been tested is:
- * **Vivado 2020.2** (Windows 10 Professional and Ubuntu 18.04.4 LTS)
+I recommend to follow the step-by-step instructions within the [Digilent Reference Documentation](https://reference.digilentinc.com/vivado/installing-vivado/start). 
 
 ###  Clone this repository
 ```bash
@@ -21,8 +20,8 @@ To be able to generate your custom FPGA designs, it is recommended to use a boar
 
 ## Prepare your Redpitaya-125-14
 ###  SD card image
-* Download [Pynq-Redpitaya-125-14-2.6.0.img](https://drive.google.com/file/d/1YY4HYoDWa3E1ZVyxrV7naTFVoDieKrwm/view). For more information on how the PYNQ image was built see [here](https://github.com/dspsandbox/Pynq-Redpitaya-125).
-* Write the PYNQ image onto your SD card. You can find detailed instructions [here](https://pynq.readthedocs.io/en/v2.6.1/appendix.html#writing-the-sd-card-image).
+* Download [Pynq-Redpitaya-125-14-3.0.1.img](https://drive.google.com/file/d/1yZ7dBUzU9IY8ECg2v9Jc2SXsewsgbF-1/view?usp=sharing). For more information on how the PYNQ image was built see [here](https://github.com/dspsandbox/Pynq-Redpitaya-125).
+* Write the PYNQ image onto your SD card. You can find detailed instructions [here](https://pynq.readthedocs.io/en/v3.0.0/appendix/sdcard.html).
 
 ### Power up the Redpitaya-125-14
 * Insert the SD card into your Redpitaya-125-14.
