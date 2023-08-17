@@ -1,5 +1,5 @@
 ## About this tutorial 
-:stopwatch: 45 min
+:stopwatch: 45 min 
 
 **Key learnings:**
 
