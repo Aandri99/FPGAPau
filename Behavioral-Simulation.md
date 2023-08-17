@@ -79,7 +79,7 @@ source <absolute-path-to-FPGA-Notes-for-Scientists>/sim/sim_counter.tcl
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/run_sim.png" width="1000"/>
 
 ## Next steps
-See assignment on [PWM](Assignments.md#2-pwm-digital-io--simulation).
+See assignment on [PWM](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Assignments#2-pwm-digital-io--simulation).
 
 
 
