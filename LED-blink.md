@@ -71,7 +71,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 ### Create an HDL counter
 ***
 
-:information_source: Two main Hardware Description Languages (HDLs) exist: VHDL and Verilog. Vivado supports both languages and, within this tutorial, all example codes are duplicated. There is not a good answer to which language is *better* and it typically ends up being a matter of taste and your *environment* (colleagues, language of previously developed codes ...), that drives you to develop in one ore another. In my case, I first started learning VHDL but ended up shifting over to Verilog, which is weakly typed and (in my opinion) easier and faster to write. In any case, please have a look at the the *.vhd* and *.v* modules within the [HDL](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl) folder and choose the language you feel more comfortable with.
+:information_source: Two main Hardware Description Languages (HDLs) exist: VHDL  and Verilog. There is not a good answer to which language is *better* and it typically ends up being a matter of taste and your *environment* (colleagues, language of previously developed codes ...), that drives you to develop in one ore another. Vivado supports both languages and for this reason also all example codes of this tutorial come in pairs of *.vhd* and *.v* files. 
 
 * The next step is to create a counter logic with variable counter increment. Click on *Add Sources* (left panel) and select *Add or create design sources*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addSourceVivado.PNG" width="450"/>
