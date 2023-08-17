@@ -116,5 +116,5 @@ xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/analog_echo
 * Run the Jupyter notebook. 
 
 ## Next steps
-See assignments on [Waveform Generation](Assignments.md#3-axi-stream-waveform-generator-analog-io) and [DDS](Assignments.md#4-dds-analog-io).
+See assignments on [Waveform Generation](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Assignments#3-axi-stream-waveform-generator-analog-io) and [DDS](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Assignments#4-dds-analog-io).
 
