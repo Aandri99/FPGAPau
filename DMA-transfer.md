@@ -135,4 +135,4 @@ xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/DMA_transfer
 * Run the Jupyter notebook. 
 
 ## Next steps
-See assignment on [DMA & Decimation](Assignments.md#4-dma--decimation-analog-io).
+See assignment on [DMA & Decimation](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Assignments#4-dma--decimation-analog-io).
