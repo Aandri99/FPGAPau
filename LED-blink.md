@@ -85,7 +85,7 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * The new source file (*counter.vhd* or *counter.v*) will be added to the project source tree. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/counterVhd.PNG" width="1000"/>
 
-* Edit *counter.vhd* or *counter.v* to include the counter logic (see programming examples for [VHDL](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) or [Verilog](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.v)).
+* Edit it to include the counter logic (see programming examples for [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) or [counter.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.v)).
 
 * Add the HDL counter module to your design. To this end, right-click on the design and select *Add Module*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addModule.PNG" width="220"/>
