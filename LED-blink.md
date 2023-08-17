@@ -153,7 +153,7 @@ xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/LED_blink
 * Run the Jupyter notebook. 
 
 ## Next steps
-See assignment on [FPGA Pendulum Waves](Assignments.md#1-fpga-pendulum-waves-digital-io).
+See assignment on [FPGA Pendulum Waves](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/Assignments#1-fpga-pendulum-waves-digital-io).
 
  
 
