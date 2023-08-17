@@ -59,13 +59,13 @@ Follow the steps in [Analog echo](https://github.com/dspsandbox/FPGA-Notes-for-S
 
 ### AXI stream control module
 
-We need a simple HDl module that controls the controls the data streams going into / out of the DMA engines. The main functionality is:
+We need a simple HDL module that controls the controls the data streams going into / out of the DMA engines. The main functionality is:
 * Hold the incoming/outgoing data streams until a trigger signal is received.
 * Rise the AXI stream *tlast* line when the last data sample gets acquired.
 
 To include a stream control module please follow the steps below:
 * Within the left panel go to *Project Manager --> Add sources* and select  *Add or create design sources*.
-* Import [FPGA-Notes-for-Scientists/hdl/stream_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_ctrl.vhd).
+* Import [stream_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_ctrl.vhd) or [stream_ctrl.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_ctrl.v).
 * (x4) Add the stream control module to your design (right-click on the design and select *Add Module*) and draw the required connections.
    * *stream_i* / *stream_o* -->  as highlighted in diagram below.
    * *clk* / *resetn* -->  similar to the already instantiated logic, they are connected to *clk_125* and *peripheral_aresetn*.
@@ -134,5 +134,5 @@ xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/DMA_transfer
 
 * Run the Jupyter notebook. 
 
- 
-
+## Next steps
+See assignment on [DMA & Decimation](Assignments.md#4-dma--decimation-analog-io).

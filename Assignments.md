@@ -1,3 +1,4 @@
+
 ## 1. FPGA Pendulum Waves (Digital IO)
 We are going to implement a digital version of the beautiful [Pendulum Waves Experiment](https://www.youtube.com/watch?v=yVkdfJ9PkRQ&t=0s&ab_channel=HarvardNaturalSciencesLectureDemonstrations).
 
@@ -18,7 +19,8 @@ We are going to implement a digital version of the beautiful [Pendulum Waves Exp
 ## 2. PWM (Digital IO & Simulation)
 In this assignment we are going to develop a [Pulse-Width Modulation (PWM)](https://en.wikipedia.org/wiki/Pulse-width_modulation) module. 
 
-1. Based on the [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd), create a new VHDL module that has the following ports
+1. Based on the [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) or [counter.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.v
+), create a new VHDL module that has the following ports
 
 |Name|In/Out | Width (bits) |Description |
 |---|---|---|---|
@@ -34,7 +36,7 @@ In this assignment we are going to develop a [Pulse-Width Modulation (PWM)](http
 
 4. Connect the PWM module to the *pwm_o* ports (requires to uncomment *PWM DAC* section in [redpitaya-125-14.xdc](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sdc/redpitaya-125-14.xdc)) and verify on an oscilloscope that the you can use PWM in combination with the integrated low-pass filter to generate an analogue output.
 
-**HINT** : If you have problems creating your own PWM module, see [pwm.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/pwm.vhd).
+**HINT** : If you have problems creating your own PWM module, see [pwm.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/pwm.vhd) or [pwm.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/pwm.v).
 
 ## 3. Axi Stream Waveform Generator (Analog IO)
 The AXI Stream interface is the golden standard for **continuous data flows**. A comprehensive introduction to this interface type can be found [here](https://lauri.xn--vsandi-pxa.com/hdl/zynq/axi-stream.html).
@@ -58,7 +60,7 @@ In this assignment we are going to convert the previously used counter and PWM m
 
 1. Open the [Analog-Echo](analog-echo) design example
 
-1. Create a new VHDL module based on [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) where the 16 most-significant-bits (MSB) are connected to a *<interface_name>_tdata* output. 
+1. Create a new VHDL module based on [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) or [counter.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.v) where the 16 most-significant-bits (MSB) are connected to a *<interface_name>_tdata* output. 
 
 2. Create a *<interface_name>_tvalid* output that is always 1.
 
@@ -66,7 +68,8 @@ In this assignment we are going to convert the previously used counter and PWM m
 
 4. Repeat steps (1)-(3) for the PWM module. Note that you will have to slightly change the output logic, since *pwm_o = 1* and *pwm_o = 0* should be mapped to *<interface_name>_tdata = "01111111111111"* (binary representation of max 16-bit integer) and *<interface_name>_tdata = "1000000000000000"* (binary representation of min 16-bit integer). Once connected to the DAC of your Redpitaya, you should see square waveforms on your oscilloscope.
 
-**HINT** : If you have problems creating your own axis stream saw-tooth module, see [test_waveform.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/test_wave.vhd).
+**HINT** : If you have problems creating your own axis stream saw-tooth module, see [test_waveform.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/test_wave.vhd) or [test_waveform.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/test_wave.v+).
+.
 
 
 ## 4. DDS (Analog IO)
@@ -75,8 +78,8 @@ In this assignment we are going to use the [Vivado DDS compiler](https://docs.xi
 1. Open the [Analog-Echo](analog-echo) design example.
 
 2. Click on *Add Sources* (left control panel) and import:
-   * [FPGA-Notes-for-Scientists/hdl/assignments/dds/dds_compiler_0.xci](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_compiler_0.xci)
-   * [FPGA-Notes-for-Scientists/hdl/assignments/dds/dds_wrapper.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_wrapper.vhd)
+   * Pre-configured DDS compiler IP instance: [dds_compiler_0.xci](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_compiler_0.xci)
+   *  Simple HDL wrapper that formats the DDS outputs as AXi Streams: [dds_wrapper.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_wrapper.vhd) or [dds_wrapper.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/dds/dds_wrapper.v).
 
 3. Remove the connection from ADC to DAC and insert the *dds_wrapper.vhd* with the *cos* and *sin* outputs connected to *dac_data_1* and *dac_data_2*, respectively.
 
@@ -90,26 +93,26 @@ In this assignment we are going to use the [Vivado DDS compiler](https://docs.xi
 
 7. Verify the output on your oscilloscope
 
-8. Extend the FPGA design to include [amplitude_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/amplitude_ctrl.vhd) module before between the DDS and the DAC. The amplitude can be set via the AXI4 Register Bank.
+8. Extend the FPGA design to include [amplitude_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/amplitude_ctrl.vhd) or [amplitude_ctrl.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/amplitude_ctrl.v)module before between the DDS and the DAC. The amplitude can be set via the AXI4 Register Bank.
 
 9. Re-create HDL wrapper, generate bitstream and verify that you can also control the amplitude of the outputs.
 
-10. DDS Multitone generation
+10. DDS multi-tone generation:
 
-10.1. Create 4 separate hierarchies containing:
-   * AXI4 Register Banks for *phase_inc*, *phase_off* and *amplitude*. 
-   * DDS wrapper
-   * Amplitude control
+      1. Create 4 separate hierarchies containing:
+         * AXI4 Register Banks for *phase_inc*, *phase_off* and *amplitude*. 
+         * DDS wrapper
+         * Amplitude control
 
-10.2. Use a separate AXI4 Register Bank to provide a common *phase_clr* to all hierarchies.
+      2. Use a separate AXI4 Register Bank to provide a common *phase_clr* to all hierarchies.
 
-10.3. Add the 4 *sin* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd). Leave the 4 *cos* outputs disconnected. 
+      3. Add the 4 *sin* outputs via a cascade of [stream_adder.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.vhd) or [stream_adder.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/stream_adder.v). Leave the 4 *cos* outputs disconnected. 
 
-10.4 Connect the output of the cascade to *dac_data_1* and disable *dac_data_2* (double click on the DAC IP and uncheck *Ch2 Enabled*).
+      4. Connect the output of the cascade to *dac_data_1* and disable *dac_data_2* (double click on the DAC IP and uncheck *Ch2 Enabled*).
 
-10.5 Re-create HDL wrapper, generate bitstream and verify that you are able to generate a linear combination of 4 frequency tones.
+      5. Re-create HDL wrapper, generate bitstream and verify that you are able to generate a linear combination of 4 frequency tones.
 
-10.6. Configure the frequency, phase and amplitudes to generate Square, Triangular... waveforms. To this end, have a look at the [Table of common Fourier series](https://en.wikipedia.org/wiki/Fourier_series#Table_of_common_Fourier_series)
+      6. Configure the frequency, phase and amplitudes to generate Square, Triangular... waveforms. To this end, have a look at the [Table of common Fourier series](https://en.wikipedia.org/wiki/Fourier_series#Table_of_common_Fourier_series)
 
 
 ## 4. DMA & Decimation (Analog IO)
@@ -134,7 +137,7 @@ In this assignment we are going to introduce a decimation logic that is capable 
  * data_o_tvalid = data_i_tvalid every *dec* clock cycles and data_o_tvalid = 0 otherwise.
  * data_i_tready = data_o_tready every *dec* clock cycles and data_i_tready = 0 otherwise.
 
-**Hint**: Have a look at the [stream_dec.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/stream_dec.vhd) to get inspired
+**Hint**: Have a look at the [stream_dec.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/stream_dec.vhd) or [stream_dec.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/assignments/stream_dec.v) to get inspired.
 
 3. Test and verify your VHDL core via a behavioural simulation.
 

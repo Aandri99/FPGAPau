@@ -50,12 +50,13 @@ After creating a new project, we have to add the IP repository that has been cre
 
 * Connect the clocks and resets as shown in the diagram below. 
    * We use *clk_125*, which operates at 125MHz, to drive the main logic of the design. All data paths in this tutorial will be synchronous to this clock. 
-   * We connect *clk_250* and *clk_250_m45* to the DAC only. They operate at 250MHz and are phase locked to *clk_125* with a relative phase shift of 0 deg and -45 deg, respectively. 
-
+   * We connect *clk_250* and *clk_250_m45* to the DAC only. They operate at 250MHz and are phase locked to *clk_125* with a relative phase shift of 0 deg and -45 deg, respectively. These additional two clocks are required to drive the ADC and are not part of the main design. If you are interested in knowing more about the external ADC and DAC, please have a look at the user guides, respectively. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/connect_clk.PNG" width="1000"/>
 
 * Configure the AXI GPIO to have a dual 16-bit output.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/axi_gpio.PNG" width="450"/>
+
+
 
 ### AXI stream offset module
 
@@ -64,7 +65,7 @@ After creating a new project, we have to add the IP repository that has been cre
 ***
 
 * Within the left panel go to *Project Manager --> Add sources* and select  *Add or create design sources*.
-* We omit the creation of a HDL file, which was explained in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#create-a-hdl-counter), and directly import [FPGA-Notes-for-Scientists/hdl/offset_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/offset_ctrl.vhd).
+* We omit the creation of a HDL file, which was explained in [LED blink](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/wiki/LED-blink#create-a-hdl-counter), and directly import [offset_ctrl.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/offset_ctrl.vhd) or [offset_ctrl.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/offset_ctrl.v) .
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/add_offset_ctrl.PNG" width="450"/>
 
 * (x2) Add the offset control module to your design (right-click on the design and select *Add Module*) and draw the required connections.
@@ -113,4 +114,7 @@ xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/analog_echo
 * Open the Jupyter Notebook and edit it as shown in [FPGA-Notes-for-Scientists/jupyter_notebooks/analog_echo.ipynb](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/jupyter_notebooks/analog_echo.ipynb). 
 
 * Run the Jupyter notebook. 
+
+## Next steps
+See assignments on [Waveform Generation](Assignments.md#3-axi-stream-waveform-generator-analog-io) and [DDS](Assignments.md#4-dds-analog-io).
 

@@ -1,5 +1,5 @@
 ## About this tutorial 
-:stopwatch: 30 min
+:stopwatch: 45 min
 
 **Key learnings:**
 
@@ -71,9 +71,8 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 ### Create an HDL counter
 ***
 
-:information_source: A ready-to-use HDL counter is available under [FPGA-Notes-for-Scientists/hdl/counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd). 
+:information_source: Two main Hardware Description Languages (HDLs) exist: VHDL and Verilog. Vivado supports both languages and, within this tutorial, all example codes are duplicated. There is not a good answer to which language is *better* and it typically ends up being a matter of taste and your *environment* (colleagues, language of previously developed codes ...), that drives you to develop in one ore another. In my case, I first started learning VHDL but ended up shifting over to Verilog, which is weakly typed and (in my opinion) easier and faster to write. In any case, please have a look at the the *.vhd* and *.v* modules within the [HDL](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl) folder and choose the language you feel more comfortable with.
 
-***
 * The next step is to create a counter logic with variable counter increment. Click on *Add Sources* (left panel) and select *Add or create design sources*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addSourceVivado.PNG" width="450"/>
 
@@ -83,10 +82,10 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 * Define the module ports (they can also be changed later, within the HDL code).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/defineModule.PNG" width="350"/>
 
-* The new source file (*counter.vhd*) will be added to the project source tree. 
+* The new source file (*counter.vhd* or *counter.v*) will be added to the project source tree. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/counterVhd.PNG" width="1000"/>
 
-* Edit *counter.vhd* to include the counter logic (see [FPGA-Notes-for-Scientists/hdl/counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) for a working example).
+* Edit *counter.vhd* or *counter.v* to include the counter logic (see [VHDL](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) and [Verilog](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.v) working examples).
 
 * Add the HDL counter module to your design. To this end, right-click on the design and select *Add Module*.
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/addModule.PNG" width="220"/>
@@ -115,13 +114,15 @@ In this tutorial we are going to demonstrate how to blink the LEDs of your Redpi
 
 ### Bitstream generation
 
-* Before bitstream generation, a HDL wrapper around the design needs to be created. Within your project source tree, right-click on top of your design  and select *Create HDL Wrapper* (use default settings).
+* Before bitstream generation, a HDL design wrapper needs to be created, which is an automatically generated HDL code that represents your graphical design.
+
+    Within your project source tree, right-click on top of your design  and select *Create HDL Wrapper* (use default settings).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/LED-blink/hdlWrapper.PNG" width="1000"/>
 
 
 * Click on *Generate Bitstream* (left panel) and proceed with the default settings. This will automatically take you through:
-     * **Synthesis**: translates the custom design FPGA design into logical elements such as flip-flops, LUTs...
-     * **Implementation**: places the logical elements of the synthesized design into the particular chip architecture.
+     * **Synthesis**: translates the HDL wrapper (i.e. your custom FPGA design) into logical elements such as flip-flops, LUTs...
+     * **Implementation**: places and routes the logical elements of the synthesized design into the particular chip architecture.
      * **Bitstream generation**: creates a binary image that contains the implemented design.
 
 * After a few minutes, the process completes. Press *Cancel* to close the pop-up window.
@@ -151,7 +152,8 @@ xilinx@<static-ip-address>:/home/xilinx/pynq/overlays/LED_blink
 
 * Run the Jupyter notebook. 
 
- 
+## Next steps
+See assignment on [FPGA Pendulum Waves](Assignments.md#1-fpga-pendulum-waves-digital-io).
 
  
 

@@ -1,5 +1,5 @@
 ## About this tutorial 
-:stopwatch: 20 min
+:stopwatch: 30 min
 
 **Key learnings:**
 
@@ -21,7 +21,7 @@ The Vivado toolchain allows you to simulate your logic at different points of th
  * **Post-synthesis simulation**: simulation of the RTL code when converted to actual FPGA logic building blocks (Flip-Flops, LUTs...). 
  * **Post-implementation simulation**: simulation of the RTL code when converted to actual FPGA logic building blocks and placed within the specified FPGA chip. 
 
-For most application it is sufficient to verify your logic via **behavioural simulations**. Vivado has built-in mechanisms that raise an error if synthesis and implementation fail (e.g. when the requested logic cannot meet timing constraints, when the requested resources are not available in the specified FPGA chip...).
+For most application it is sufficient to verify your logic via **Behavioural Simulations**. Vivado has built-in mechanisms that raise an error if synthesis and implementation fail (e.g. when the requested logic cannot meet timing constraints, when the requested resources are not available in the specified FPGA chip...).
 
 
 The following discussion covers two different methods to simulate custom FPGA logic. 
@@ -42,11 +42,11 @@ The following discussion covers two different methods to simulate custom FPGA lo
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/create_tb_0.PNG" width="450"/>
 
-* Import the [FPGA-Notes-for-Scientists/sim/tb_counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sim/tb_counter.vhd) testbench and click *Finish*.
+* Import [tb_counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sim/tb_counter.vhd) or [tb_counter.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/sim/tb_counter.v) testbench and click *Finish*.
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/create_tb_1.PNG" width="450"/>
 
-* Select *tb_counter.vhd* as the *Top* simulation file
+* Select *tb_counter.vhd* or *tb_counter.v* as the *Top* simulation file
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/set_top_tb.png" width="1000"/>
 
@@ -62,7 +62,7 @@ The following discussion covers two different methods to simulate custom FPGA lo
 
 ## 2. TCL stimulus
 
-* Since we only want to simulate the [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) module, we have to make sure that it is set as the *Top* simulation file. 
+* Since we only want to simulate the [counter.vhd](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) or [counter.v](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/hdl/counter.vhd) module, we have to make sure that it is set as the *Top* simulation file. 
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/set_top.png" width="1000"/>
 
@@ -78,7 +78,8 @@ source <absolute-path-to-FPGA-Notes-for-Scientists>/sim/sim_counter.tcl
 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/behavioural-simulation/run_sim.png" width="1000"/>
 
-
+## Next steps
+See assignment on [PWM](Assignments.md#2-pwm-digital-io--simulation).
 
 
 
