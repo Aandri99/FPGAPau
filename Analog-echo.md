@@ -50,7 +50,7 @@ After creating a new project, we have to add the IP repository that has been cre
 
 * Connect the clocks and resets as shown in the diagram below. 
    * We use *clk_125*, which operates at 125MHz, to drive the main logic of the design. All data paths in this tutorial will be synchronous to this clock. 
-   * We connect *clk_250* and *clk_250_m45* to the DAC only. They operate at 250MHz and are phase locked to *clk_125* with a relative phase shift of 0 deg and -45 deg, respectively. These additional two clocks are required to drive the ADC and are not part of the main design. If you are interested in knowing more about the external ADC and DAC, please have a look at the [LTC2145CUP-14](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/datasheet/LTC2145.pdf) and [DAC1401D125HL](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/datasheet/DAC1401D125.pdf) datasheets, respectively. 
+   * We connect *clk_250* and *clk_250_m45* to the DAC only. They operate at 250MHz and are phase locked to *clk_125* with a relative phase shift of 0 deg and -45 deg, respectively. These additional two clocks are required to drive the ADC and are not part of the main design. If you are interested in knowing more about the external ADC and DAC, please have a look at the [LTC2145CUP-14](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/datasheet/LTC2145.pdf) and [DAC1401D125HL](https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/datasheet/DAC1401D125.pdf) datasheet, respectively. 
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/analog-echo/connect_clk.PNG" width="1000"/>
 
 * Configure the AXI GPIO to have a dual 16-bit output.
