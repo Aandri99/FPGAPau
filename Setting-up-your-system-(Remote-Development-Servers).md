@@ -35,7 +35,7 @@
 
 |Resource | User | Password |
 |-|-|-|
-| FPGA (scp, ssh, jupyter notebook)| Xilinx | Xilinx|
+| FPGA (scp, ssh, jupyter notebook)| xilinx | xilinx|
 | Remote Server (RDP) | ubuntu | top_secret|
 | FPGA Server Ctrl | tag sent via e-mail | pwd sent via e-mail|
 
