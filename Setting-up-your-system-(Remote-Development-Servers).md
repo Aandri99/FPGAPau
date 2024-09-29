@@ -7,9 +7,9 @@
 
 ## Access FPGA Server Control 
 * Navigate to [http://18.100.25.145:8000/]
-* Introduce your user credentials (tag & password)
+* Introduce your user credentials (tag & password, see credentials cheat sheet below)
 * Select *Get Server State* and hit *Submit*
-* Inspect the response and keep the IP address (you will need it in the following section)
+* Inspect the response and keep the IP address (you will need it in the following sections)
 * Use the *Start Server* and *Stop Server* options to start or stop your remote server
 
 ## Configure Redpitaya
@@ -19,5 +19,27 @@
    ```
    server_ip = "X.X.X.X"   #CHANGE TO SERVER IP
    ```
+* Save and eject SD card
+* Insert SD card into your Redpitaya (should be powered down)
+* Power up your Redpitaya
+
+## Verify Connectivity
+* Open FPGA Server Control
+* Start your Server
+* Connect via remote desktop. Protocol: RDP. Address: server IP. Credentials: see cheat sheet below
+* On your remote machine, open the Firefox web browser and navigate to *10.0.0.2:9090*
+* You should be prompted to the PYNQ Jupyter Notebook welcome page (password: see credentials cheat sheet below).
+<img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/welcome.png" width="1200"/>
+
+## Credentials Cheat Sheet
+
+|Resource | User | Password |
+| FPGA (scp, ssh, jupyter notebook)| Xilinx | Xilinx|
+| Remote Server (RDP) | ubuntu | top_secret|
+| FPGA Server Ctrl | tag sent via e-mail | pwd sent via e-mail|
+
+
+
+
 
  
