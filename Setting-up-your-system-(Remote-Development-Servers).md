@@ -30,7 +30,8 @@
 * On your remote machine, open the Firefox web browser and navigate to *10.0.0.2:9090*
 * You should be prompted to the PYNQ Jupyter Notebook welcome page (password: see credentials cheat sheet below).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/welcome.png" width="1200"/>
-* Please remember to always stop you server 
+
+* Please remember to **always stop you server **
 ## Credentials Cheat Sheet
 
 |Resource | User | Password |
