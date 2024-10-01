@@ -41,11 +41,11 @@ ssh-keygen -t rsa
 * You can proceed with the default configurations and hit *Enter*.
 * Upload the the generated key pair to the Redpitaya-125-14 (password: *xilinx*).
 ```bash
-ssh-copy-id xilinx@<static-ip-address>
+ssh-copy-id xilinx@10.0.0.2
 ```
 * Verify that you can use SSH without having to provide a password.
 ```bash
-ssh xilinx@<static-ip-address>
+ssh xilinx@10.0.0.2
 ```
 
 
