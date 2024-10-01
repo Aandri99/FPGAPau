@@ -25,7 +25,7 @@
 
 ***
 
-:information_source: Once powered up, only the green LED of your Redpitaya will shine. The blue LED is initially powered off, it will turn in the upcoming lectures whenever a bitstream gets loaded. Other status LEDs described in the [documentation](https://redpitaya-readthedocs-io.translate.goog/en/latest/developerGuide/hardware/leds.html?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=sc) are not implemented in the firmware for this course. To verify that the Redpiatay is operative, please proceed to the following section (verify full system connectivity) or access its Ubuntu Terminal via the COM port (instructions [here](../Setting-up-your-system))
+:information_source: Once powered up, only the green LED of your Redpitaya will shine. The blue LED is initially powered off, it will turn in the upcoming lectures whenever a bitstream gets loaded. Other status LEDs described in the [documentation](https://redpitaya-readthedocs-io.translate.goog/en/latest/developerGuide/hardware/leds.html?_x_tr_sl=en&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=sc) are not implemented in the firmware for this course. To check that your Redpitaya is operative, please proceed to the following section (verify full system connectivity) or access its Ubuntu Terminal via the COM port (instructions [here](https://redpitaya.readthedocs.io/en/latest/developerGuide/software/console/console/console.html)).
 
 ***
 ## Verify Connectivity
