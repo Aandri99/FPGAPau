@@ -31,7 +31,7 @@
 * You should be prompted to the PYNQ Jupyter Notebook welcome page (password: see credentials cheat sheet below).
 <img src="https://github.com/dspsandbox/FPGA-Notes-for-Scientists/blob/main/doc/Setting-up-your-system/welcome.png" width="1200"/>
 
-### Create and share RSA key pair
+## Create and share RSA key pair
 We will generate an RSA key pair that will prevent you from using passwords in your SSH and SCP commands:
 * Open a command line terminal (Ubuntu Applications Menu)
 * Generate the key pair:
